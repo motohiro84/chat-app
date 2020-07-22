@@ -7,36 +7,7 @@
   </div>
 </div>
 <div class= "main-mid">
-  <div class="message">
-    <div class="message-top">
-      <div class="message-name">
-        Tom
-      </div>
-      <div class="message-time">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="message-bot">
-      <div class="message-text">
-        おはよう
-      </div>
-    </div>
-  </div>
-    <div class="message">
-    <div class="message-top">
-      <div class="message-name">
-        Tom
-      </div>
-      <div class="message-time">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-    <div class="message-bot">
-      <div class="message-text">
-        こんばんわ
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 <%= form_with model: [@room, @message], html: {class: "main-bot"}, local: true do |f|%>
   <div class="contact-form">
