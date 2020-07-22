@@ -38,13 +38,13 @@
     </div>
   </div>
 </div>
-<div class= "main-bot">
+<%= form_with model: [@room, @message], html: {class: "main-bot"}, local: true do |f|%>
   <div class="contact-form">
-    <input placeholder="type a meesage" class="form-text">
+    <%= f.text_field :content, class: 'form-text', placeholder: 'type a message' %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-    <input type="submit" value="送信" class="form-button">
-</div>
+  <%= f.submit '送信', class: 'form-button' %>
+<% end %>
